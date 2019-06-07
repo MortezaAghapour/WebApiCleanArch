@@ -1,0 +1,25 @@
+﻿how to get CancellationToken in class(none controller) ===> HttpContext.RequestAborted
+
+
+*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+
+هر جا که خروجی کنترلر ما چیزی بجز 
+ApiResult 
+باشد ، باید اتریبیوت 
+[ApiReust]
+ بالا سر اون کنترلر بزاریم
+
+ */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+
+ [ApiController]
+ به صورت پیشفرض اطلاعات را از 
+ FromBody
+ میگیره
+ و دیگه نیازی نیس که از 
+ if(ModelState.IsValid)
+ استفاده کنیم
+
+ /*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+
+   [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
+   این اتریبیوت باعث میشه اگر مقدار اون فیلد نال باشد دیگه در خروجی نشون نده

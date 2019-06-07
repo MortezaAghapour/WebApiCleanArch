@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WebApiCleanArch.Common\WebApiCleanArch.Common.csproj" />
+    <ProjectReference Include="..\WebApiCleanArch.Domain\WebApiCleanArch.Domain.csproj" />
+    <ProjectReference Include="..\WebApiCleanArch.Persistence\WebApiCleanArch.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\PostFactories\" />
+    <Folder Include="Mappers\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Validations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.1.11" />
+  </ItemGroup>
+
+</Project>
